@@ -1,15 +1,16 @@
 import React from 'react';
-import Api from './lib/Api.js'
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
 
-
+//pages
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-          <h1>Hello world</h1>
-   <Api/>
-    
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 export default App;
