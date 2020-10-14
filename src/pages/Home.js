@@ -55,20 +55,22 @@ const Home = () => {
 
   return (
     <main>
-      <h2>Home</h2>
-      {loading && <h3>Loading</h3>}
+      <section className="container">
+        <h2>Home</h2>
+        {loading && <h3>Loading</h3>}
 
-      <form method="get" action="/" onSubmit={handleSubmit}>
-        <label htmlFor="search">Search</label>
-        <input
-          type="search"
-          id="search"
-          placeholder="Municipality to search"
-          value={searchString}
-          onChange={handleChange}
-        />
-        <button type="submit">Search</button>
-      </form>
+        <form method="get" action="/" onSubmit={handleSubmit}>
+          <label htmlFor="search">Search</label>
+          <input
+            type="search"
+            id="search"
+            placeholder="Municipality to search"
+            value={searchString}
+            onChange={handleChange}
+          />
+          <button type="submit">Search</button>
+        </form>
+      </section>
 
       {beachesToRender.map((beach) => {
         return (
@@ -77,6 +79,11 @@ const Home = () => {
             <dl>
               <dt>Municipio</dt>
               <dd>{beach.properties.Término_Mu}</dd>
+              <dd>{beach.properties.Acceso_dis}</dd>
+              <dd>{beach.properties.Tipo_de_ar}</dd>
+              <dd>{beach.properties.Bander_az}</dd>
+              <dd>{beach.properties.Forma_de_a}</dd>
+              <dd>{beach.properties.Observacio}</dd>
             </dl>
           </article>
         );

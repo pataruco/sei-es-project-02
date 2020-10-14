@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;}
+
+.municipality {
+
+}
+
+
+a {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    border-bottom: 1px solid currentColor;
+  }
+  &:focus {
+    color: grey;
+  }
+}
