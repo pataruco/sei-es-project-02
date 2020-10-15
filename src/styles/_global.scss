@@ -1,22 +1,31 @@
 * {
+  background-image: url('../assets/playa.jpg');
+
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;}
+  background-image: url('../assets/playa.jpg');
+  object-fit: fill;
+  font-family: 'Courier New', Courier, monospace;
 
-.municipality {
+  min-height: 100vh;
+}
+
+.results{
+  background-image: url('../assets/playa.jpg');
+  object-fit: cover;
 
 }
 
+// a {
+//   color: black;
+//   text-decoration: none;
+//   &:hover {
+//     border-bottom: 1px solid currentColor;
+//   }
+//   &:focus {
+//     color: grey;
+//   }
+// }
 
-a {
-  color: black;
-  text-decoration: none;
-  &:hover {
-    border-bottom: 1px solid currentColor;
-  }
-  &:focus {
-    color: grey;
-  }
-}

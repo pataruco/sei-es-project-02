@@ -7,9 +7,10 @@ const Beach = ({ data }) => {
   const blueFlag = data.properties.Bandera_az === 'Sí';
 
   return (
+    <div className="beach">
     <article key={data.properties.OBJECTID}>
       <h3>{data.properties.Nombre}</h3>
-      <div>
+      {/* <div  className="picture">
         {blueFlag && (
           <picture>
             <img src={blueFlagSvg} alt="blue flag" />
@@ -20,7 +21,7 @@ const Beach = ({ data }) => {
             <img src={a11y} alt="accesible" />
           </picture>
         )}
-      </div>
+      </div> */}
 
       <dl>
         <dt>Municipio</dt>
@@ -35,6 +36,7 @@ const Beach = ({ data }) => {
         <dd>{data.properties.Observacio}</dd>
       </dl>
     </article>
+    </div>
   );
 };
 
