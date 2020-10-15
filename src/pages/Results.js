@@ -28,7 +28,7 @@ const Results = () => {
   return (
     <main className="main">
      
-      <h2>Resultado {beachesToRender.length} playas</h2>
+      <h2>Se han encontrado {beachesToRender.length} playas</h2>
       {loading && <h3>Loading</h3>}
 
       {beachesToRender.map((beach) => (

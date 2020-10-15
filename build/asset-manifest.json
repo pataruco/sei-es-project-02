@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dbe9909b.chunk.css",
+    "main.js": "/static/js/main.e4fde0fb.chunk.js",
+    "main.js.map": "/static/js/main.e4fde0fb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d331308a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d331308a.js.map",
+    "static/js/2.2d6f432e.chunk.js": "/static/js/2.2d6f432e.chunk.js",
+    "static/js/2.2d6f432e.chunk.js.map": "/static/js/2.2d6f432e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a52710bf9f33a511cae978d8906e9366.js": "/precache-manifest.a52710bf9f33a511cae978d8906e9366.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.dbe9909b.chunk.css.map": "/static/css/main.dbe9909b.chunk.css.map",
+    "static/js/2.2d6f432e.chunk.js.LICENSE.txt": "/static/js/2.2d6f432e.chunk.js.LICENSE.txt",
+    "static/media/a11y.svg": "/static/media/a11y.20d40b9b.svg",
+    "static/media/blue-flag.svg": "/static/media/blue-flag.a14738bb.svg",
+    "static/media/index.scss": "/static/media/playa.acabe3f1.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d331308a.js",
+    "static/js/2.2d6f432e.chunk.js",
+    "static/css/main.dbe9909b.chunk.css",
+    "static/js/main.e4fde0fb.chunk.js"
+  ]
+}
