@@ -16,6 +16,7 @@ const Results = () => {
   const fetchAllBeaches = async () => {
     const beachesData = await getAllBeaches();
     const beachesToShow = getBeachesToRender(beachesData, searchString);
+    setloading(false);
     setBeachesToRender(beachesToShow);
   };
 
@@ -25,7 +26,7 @@ const Results = () => {
 
   return (
     <main className="page">
-      <h2>Results</h2>
+      <h2>Results {beachesToRender.length}</h2>
       {loading && <h3>Loading</h3>}
 
       {beachesToRender.map((beach) => {
@@ -35,6 +36,7 @@ const Results = () => {
             <dl>
               <dt>Municipio</dt>
               <dd>{beach.properties.Término_Mu}</dd>
+              <dt>Acceso de discapacidad</dt>
               <dd>{beach.properties.Acceso_dis}</dd>
               <dd>{beach.properties.Tipo_de_ar}</dd>
               <dd>{beach.properties.Bander_az}</dd>

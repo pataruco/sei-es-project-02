@@ -6,13 +6,13 @@ const Home = () => {
   const history = useHistory();
 
   const handleChange = (event) => {
-    const searchItem = event.currentTarget.value.toLowerCase();
+    const searchItem = event.currentTarget.value;
     setSearchString(searchItem);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    history.push(`/results/${searchString}`);
+    history.push(`/results/${searchString.toLowerCase()}`);
   };
 
   return (
