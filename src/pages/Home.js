@@ -16,20 +16,20 @@ const Home = () => {
   };
 
   return (
-    <main>
+    <main className="main">
       <section className="container">
-        <h2>Home</h2>
+        <h2>BUSCADOR DE PLAYAS</h2>
 
         <form method="get" action="/" onSubmit={handleSubmit}>
-          <label htmlFor="search">Search</label>
+          <label htmlFor="search"></label>
           <input
             type="search"
             id="search"
-            placeholder="Municipality to search"
+            placeholder="Buscar ciudad"
             value={searchString}
             onChange={handleChange}
           />
-          <button type="submit">Search</button>
+          <button type="submit">Buscar</button>
         </form>
       </section>
     </main>

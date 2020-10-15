@@ -26,13 +26,17 @@ const Results = () => {
   }, []);
 
   return (
-    <main className="page">
-      <h2>Results {beachesToRender.length}</h2>
+    <main className="main">
+     
+      <h2>Resultado {beachesToRender.length} playas</h2>
       {loading && <h3>Loading</h3>}
 
       {beachesToRender.map((beach) => (
+         <div className="results">
         <Beach key={beach.properties.OBJECTID} data={beach} />
+            </div>
       ))}
+  
     </main>
   );
 };

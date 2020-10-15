@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <h1>Playas</h1>
+      <h1>Playas de España</h1>
     </header>
   );
 };
