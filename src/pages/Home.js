@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { render } from 'react-dom';
 import { getAllBeaches } from '../lib/api';
+
+import Results from './Results';
+
 
 const Home = () => {
   const [beaches, setBeaches] = useState([]);
@@ -25,6 +29,7 @@ const Home = () => {
     setMunicipalities(beachesData);
     setBeaches(beachesData);
     setloading(false);
+    // handleSubmit()
   };
 
   useEffect(() => {
@@ -38,6 +43,7 @@ const Home = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+   
     const municipalitiesToShow = cities.filter((city) => {
       return city.includes(searchString);
     });
@@ -52,44 +58,34 @@ const Home = () => {
 
     setBeachesToRender(beachesToShow);
   };
+  
+  render() {
 
-  return (
-    <main>
-      <section className="container">
-        <h2>Home</h2>
-        {loading && <h3>Loading</h3>}
+    return (
+      <main>
+        <section className="container">
+          <h2>Home</h2>
+          {loading && <h3>Loading</h3>}
 
-        <form method="get" action="/" onSubmit={handleSubmit}>
-          <label htmlFor="search">Search</label>
-          <input
-            type="search"
-            id="search"
-            placeholder="Municipality to search"
-            value={searchString}
-            onChange={handleChange}
-          />
-          <button type="submit">Search</button>
-        </form>
-      </section>
+          <form method="get" action="/" onSubmit={handleSubmit}>
+            <label htmlFor="search">Search</label>
+            <input
+              type="search"
+              id="search"
+              placeholder="Municipality to search"
+              value={searchString}
+              onChange={handleChange}
+            />
+            <button type="submit">Search</button>
+          </form>
+        </section>...
+        <Results {...beachesToRender} />
 
-      {beachesToRender.map((beach) => {
-        return (
-          <article key={beach.properties.OBJECTID}>
-            <h3>{beach.properties.Nombre}</h3>
-            <dl>
-              <dt>Municipio</dt>
-              <dd>{beach.properties.Término_Mu}</dd>
-              <dd>{beach.properties.Acceso_dis}</dd>
-              <dd>{beach.properties.Tipo_de_ar}</dd>
-              <dd>{beach.properties.Bander_az}</dd>
-              <dd>{beach.properties.Forma_de_a}</dd>
-              <dd>{beach.properties.Observacio}</dd>
-            </dl>
-          </article>
-        );
-      })}
-    </main>
-  );
+      
+     
+      </main>
+    );
+  };
 };
 
 export default Home;
