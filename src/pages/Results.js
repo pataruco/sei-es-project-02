@@ -1,11 +1,8 @@
 import React from 'react';
-import beachesToRender from './Home.js';
+// import beachesToRender from './Home.js';
 
-
-
-
-  const Results =() =>{
-      beachesToRender.map((beach) => {
+const Results = ({ beaches }) => {
+  return beaches.map((beach) => {
     return (
       <article key={beach.properties.OBJECTID}>
         <h3>{beach.properties.Nombre}</h3>
@@ -19,9 +16,8 @@ import beachesToRender from './Home.js';
           <dd>{beach.properties.Observacio}</dd>
         </dl>
       </article>
-    )
-  }  );
-  
-}
+    );
+  });
+};
 
-export default Results; 
+export default Results;

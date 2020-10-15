@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { render } from 'react-dom';
 import { getAllBeaches } from '../lib/api';
-
 import Results from './Results';
-
 
 const Home = () => {
   const [beaches, setBeaches] = useState([]);
@@ -43,7 +40,7 @@ const Home = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-   
+
     const municipalitiesToShow = cities.filter((city) => {
       return city.includes(searchString);
     });
@@ -58,34 +55,28 @@ const Home = () => {
 
     setBeachesToRender(beachesToShow);
   };
-  
-  render() {
 
-    return (
-      <main>
-        <section className="container">
-          <h2>Home</h2>
-          {loading && <h3>Loading</h3>}
+  return (
+    <main>
+      <section className="container">
+        <h2>Home</h2>
+        {loading && <h3>Loading</h3>}
 
-          <form method="get" action="/" onSubmit={handleSubmit}>
-            <label htmlFor="search">Search</label>
-            <input
-              type="search"
-              id="search"
-              placeholder="Municipality to search"
-              value={searchString}
-              onChange={handleChange}
-            />
-            <button type="submit">Search</button>
-          </form>
-        </section>...
-        <Results {...beachesToRender} />
-
-      
-     
-      </main>
-    );
-  };
+        <form method="get" action="/" onSubmit={handleSubmit}>
+          <label htmlFor="search">Search</label>
+          <input
+            type="search"
+            id="search"
+            placeholder="Municipality to search"
+            value={searchString}
+            onChange={handleChange}
+          />
+          <button type="submit">Search</button>
+        </form>
+        <Results beaches={beachesToRender} />
+      </section>
+    </main>
+  );
 };
 
 export default Home;
