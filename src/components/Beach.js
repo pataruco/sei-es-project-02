@@ -1,14 +1,27 @@
 import React from 'react';
+import a11y from '../assets/a11y.svg';
+import blueFlagSvg from '../assets/blue-flag.svg';
 
 const Beach = ({ data }) => {
   const disabilityAccess = data.properties.Acceso_dis === 'Sí';
   const blueFlag = data.properties.Bandera_az === 'Sí';
 
-  console.log({ disabilityAccess, blueFlag });
-
   return (
     <article key={data.properties.OBJECTID}>
       <h3>{data.properties.Nombre}</h3>
+      <div>
+        {blueFlag && (
+          <picture>
+            <img src={blueFlagSvg} alt="blue flag" />
+          </picture>
+        )}
+        {disabilityAccess && (
+          <picture>
+            <img src={a11y} alt="accesible" />
+          </picture>
+        )}
+      </div>
+
       <dl>
         <dt>Municipio</dt>
         <dd>{data.properties.Término_Mu}</dd>
