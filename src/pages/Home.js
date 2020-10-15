@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <main className="main">
+    <main className="homeMain">
       <section className="container">
         <h2>BUSCADOR DE PLAYAS</h2>
 

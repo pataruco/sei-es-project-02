@@ -1,31 +1,20 @@
 * {
-  background-image: url('../assets/playa.jpg');
+  
 
   box-sizing: border-box;
 }
 
-body {
-  background-image: url('../assets/playa.jpg');
-  object-fit: fill;
-  font-family: 'Courier New', Courier, monospace;
+body{
+ background-image: url('../assets/playa.jpg');
+  //object-fit: fill;
+  //font-family: 'Courier New', Courier, monospace;
 
-  min-height: 100vh;
+  
 }
 
-.results{
-  background-image: url('../assets/playa.jpg');
-  object-fit: cover;
+// .results{
+  
+//  // object-fit: cover;
 
-}
-
-// a {
-//   color: black;
-//   text-decoration: none;
-//   &:hover {
-//     border-bottom: 1px solid currentColor;
-//   }
-//   &:focus {
-//     color: grey;
-//   }
 // }
 
