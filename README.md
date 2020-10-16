@@ -24,7 +24,7 @@ SASS
 NODEJS
 ## Proyect difficulties
 In order to manage the results in a second page routing the information we found problems resolved.
-Resizing the discapacities and blue flag pictures solved by including it in a className and resize them.
+Resizing the disable acces and blue flag pictures solved by including it in a className and resize them.
 Find an open Api rest that return Json and appropiate to our likes and expecifications to our proyect.
 
 #### To run
