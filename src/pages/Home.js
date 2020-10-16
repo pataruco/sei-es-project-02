@@ -22,14 +22,14 @@ const Home = () => {
 
         <form method="get" action="/" onSubmit={handleSubmit}>
           <label htmlFor="search"></label>
-          <input
+          <input className="input"
             type="search"
             id="search"
             placeholder="Buscar ciudad"
             value={searchString}
             onChange={handleChange}
           />
-          <button type="submit">Buscar</button>
+          <button className="btn" type="submit">Buscar</button>
         </form>
       </section>
     </main>
