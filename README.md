@@ -1,4 +1,3 @@
-# api-proyect
 # Beach Finder
 ## Team composition:
 - José Manuel
