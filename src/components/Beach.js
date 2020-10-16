@@ -10,24 +10,25 @@ const Beach = ({ data }) => {
     <div className="beach">
     <article key={data.properties.OBJECTID}>
       <h3>{data.properties.Nombre}</h3>
-      {/* <div  className="picture">
+      <div  className="picture">
         {blueFlag && (
           <picture>
-            <img src={blueFlagSvg} alt="blue flag" />
+            <img className="blue-flag" src={blueFlagSvg} alt="blue flag" />
           </picture>
         )}
         {disabilityAccess && (
           <picture>
-            <img src={a11y} alt="accesible" />
+            <img className="disability" src={a11y} alt="accesible" />
           </picture>
         )}
-      </div> */}
+      </div>
 
       <dl>
         <dt>Municipio</dt>
         <dd>{data.properties.Término_Mu}</dd>
         <dt>Acceso de discapacidad</dt>
-        <dd>{data.properties.Acceso_dis}</dd>
+          <dd>{data.properties.Acceso_dis}</dd>
+          <dt>Tipo de Arena</dt>
         <dd>{data.properties.Tipo_de_ar}</dd>
         <dt>Bandera azul</dt>
         <dd>{data.properties.Bandera_az}</dd>
